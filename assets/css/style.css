@@ -153,7 +153,7 @@ h1::first-letter {
 /*stylng for tab content start here*/
 
 .tab-content li {
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 
