@@ -134,7 +134,8 @@ h1::first-letter {
   border-bottom: none;
 }
 
-.active-li {
+/*for active tab*/
+.active-tab {
   border: 1px solid #AFBBC9;
   border-bottom: none;
 }
@@ -204,14 +205,16 @@ h1::first-letter {
   max-height: 220px;
 }
 
+.all-img {
+  display: none;
+}
 
 .li-content {
-  /* display: none; */
-  display: flex;
+  display: none; 
   justify-content: space-between;
 }
 
-.active-tab {
+.active-li {
   display: flex;
 }
 
@@ -238,12 +241,6 @@ h1::first-letter {
   line-height: 30px;
 }
 /*stylng for tab content end here*/
-
-
-
-
-
-
 /*=================================
   main styling ends here
 =================================*/
