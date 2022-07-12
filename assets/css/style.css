@@ -152,7 +152,7 @@ h1::first-letter {
 /*stylng for tab list end here*/
 /*stylng for tab content start here*/
 
-.tab-content li {
+.li-content {
   display: none;
   justify-content: space-between;
 }
