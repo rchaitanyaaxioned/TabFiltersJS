@@ -107,31 +107,71 @@ li {
 /*=================================
   main styling starts here
 =================================*/
-h2 {
+h1 {
   color: #28489A;
   font-size: 30px;
 }
 
-h2::first-letter {
+h1::first-letter {
+  text-transform: capitalize;
+}
+
+.tabs {
+  margin: 50px 0 40px 0;
+  border-bottom: 3px solid #AFBBC9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tabs li {
+  margin: 0 2%;
+  width: 80%;
+  text-align: center;
+  border-bottom: none;
+}
+
+.active-li {
+  border: 1px solid #AFBBC9;
+  border-bottom: none;
+}
+
+.active-a {
+  color: #28489A;
+}
+
+.tabs a {
+  padding: 15px 0;
+  color: #AFBBC9;
+  font-size: 20px;
   text-transform: capitalize;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .tab-list li {
-  display: flex;
+  display: none;
   justify-content: space-between;
+}
+
+.active-tab {
+  display: flex;
 }
 
 .tab-list figure {
   flex-basis: 40%;
+  text-align: center;
 }
 
 .tab-list p {
+  margin: 25px 0;
+  color: #AFBBC9;
   flex-basis: 60%;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 
