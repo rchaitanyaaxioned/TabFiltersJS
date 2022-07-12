@@ -107,7 +107,9 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/*stylng for heading start here*/
 h1 {
+  margin-top: 40px;
   color: #28489A;
   font-size: 30px;
 }
@@ -115,8 +117,9 @@ h1 {
 h1::first-letter {
   text-transform: capitalize;
 }
-
-.tabs {
+/*stylng for heading end here*/
+/*stylng for tab list start here*/
+.tab-list {
   margin: 50px 0 40px 0;
   border-bottom: 3px solid #AFBBC9;
   display: flex;
@@ -124,7 +127,7 @@ h1::first-letter {
   justify-content: space-between;
 }
 
-.tabs li {
+.tab-list li {
   margin: 0 2%;
   width: 80%;
   text-align: center;
@@ -140,20 +143,17 @@ h1::first-letter {
   color: #28489A;
 }
 
-.tabs a {
+.tab-list a {
   padding: 15px 0;
   color: #AFBBC9;
   font-size: 20px;
   text-transform: capitalize;
 }
+/*stylng for tab list end here*/
+/*stylng for tab content start here*/
 
-img {
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.tab-list li {
-  display: none;
+.tab-content li {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -161,19 +161,24 @@ img {
   display: flex;
 }
 
-.tab-list figure {
+.tab-content figure {
   flex-basis: 40%;
   text-align: center;
 }
 
-.tab-list p {
+img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.tab-content p {
   margin: 25px 0;
   color: #AFBBC9;
   flex-basis: 60%;
   font-size: 20px;
   line-height: 30px;
 }
-
+/*stylng for tab content end here*/
 
 
 
