@@ -214,12 +214,12 @@ h1::first-letter {
   justify-content: space-between;
 }
 
-.active-li {
-  display: flex;
-}
-
 .tab-content li {
   display: none;
+}
+
+.tab-content .active-li {
+  display: flex;
 }
 
 .tab-content figure {
