@@ -219,7 +219,7 @@ h1::first-letter {
 }
 
 .tab-content li {
-  display: flex;
+  display: none;
 }
 
 .tab-content figure {
