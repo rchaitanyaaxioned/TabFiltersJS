@@ -103,23 +103,36 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
 
 /*=================================
   main styling starts here
 =================================*/
+h2 {
+  color: #28489A;
+  font-size: 30px;
+}
 
+h2::first-letter {
+  text-transform: capitalize;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tab-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-list figure {
+  flex-basis: 40%;
+}
+
+.tab-list p {
+  flex-basis: 60%;
+}
 
 
 
@@ -130,25 +143,6 @@ li {
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+@media only screen and (max-width: 995px) {}  
