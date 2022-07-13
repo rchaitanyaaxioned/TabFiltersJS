@@ -3,38 +3,26 @@ const liContent = document.querySelectorAll(".li-content");
 const tabAnchor = document.getElementsByTagName("a");
 const btn = document.querySelectorAll(".btn");
 
+//for tab from tab-list
 tabs.forEach(dispalyContent);
 
 function dispalyContent(item, index) {
 
-  item.onclick = function () {
+  item.addEventListener("click", activeClasses);
 
-    // item.classList.toggle("active-tab");
-    // liContent[index].classList.toggle("active-li");
-    // tabAnchor[index].classList.toggle("active-a");
+  function activeClasses() {
+    //for item in tab content
+    tabs.forEach(removeClass);
 
-    // btn.forEach(check);
-    // function check(i, idx) {
-    //   i.onclick = function () {
-    //     if (i.classList.contains("active-btn") == true) {
-    //       i.classList.remove("active-btn");
-    //     } else {
-    //       i.classList.add("active-btn");
-    //     }
-    //   }
-    // }
-
-    let result = item.classList.contains("active-tab");
-
-    if (result == true) {
-      item.classList.remove("active-tab");
-      liContent[index].classList.remove("active-li");
-      tabAnchor[index].classList.remove("active-a");
-    } else {
-      item.classList.add("active-tab");
-      liContent[index].classList.add("active-li");
-      tabAnchor[index].classList.add("active-a");
+    function removeClass(ritem, ridx) {
+      ritem.classList.remove("active-tab");
+      liContent[ridx].classList.remove("active-li");
+      tabAnchor[ridx].classList.remove("active-a");
     }
+
+    item.classList.add("active-tab");
+    liContent[index].classList.add("active-li");
+    tabAnchor[index].classList.add("active-a");
   }
 }
 
