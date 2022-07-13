@@ -220,40 +220,138 @@ h1::first-letter {
 /*stylng for heading end here*/
 /*stylng for tab list start here*/
 .tab-list {
+  padding: 0 2%;
   margin: 50px 0 40px 0;
-  border-bottom: 3px solid #AFBBC9;
+  /* border-bottom: 3px solid #AFBBC9; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.tab-list li {
-  margin: 0 2%;
-  width: 80%;
+.tab-list:before {
+  width: 23px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 68%;
+  left: 7%;
+  background: #AFBBC9;
+  content: "";
+}
+
+.tab-list::after {
+  width: 23px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 68%;
+  right: 7%;
+  background: #AFBBC9;
+  content: "";
+}
+
+.tab {
+  width: 100%;
   text-align: center;
-  border-bottom: none;
+  border-bottom: 3px solid #AFBBC9;
 }
 
 /*for active tab*/
 .active-tab {
   border: 1px solid #AFBBC9;
   border-bottom: none;
-}
-
-.tab-list .active-a {
   color: #28489A;
 }
 
-.tab-list a {
+.tab-a {
   padding: 15px 0;
   color: #AFBBC9;
   font-size: 20px;
   text-transform: capitalize;
 }
 
+.active-a {
+  color: #28489A;
+}
+
 /*stylng for tab list end here*/
 /*stylng for tab content start here*/
+.history {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.tab-content {
+  margin: 0 2%;
+  display: none;
+}
+
+.tab-content figure {
+  padding: 10px 2%;
+  flex-basis: 40%;
+}
+
+.tab-content p {
+  margin: 25px 0;
+  color: #AFBBC9;
+  flex-basis: 60%;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.btn-list {
+  width: 80%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-list li {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+.btn {
+  width: 80%;
+  padding: 5px 0;
+  background-color: #AFBBC9;
+  border: 1px solid #28489A;
+  border-radius: 5px;
+  color: #28489A;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.active-btn {
+  background-color: #28489A;
+  border: 1px solid #AFBBC9;
+  color: #AFBBC9;
+}
+
+.img-list {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-list li {
+  margin: 10px 1%;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+/*
 .history {
   display: flex;
   flex-direction: column;
@@ -346,7 +444,7 @@ h1::first-letter {
 .img-list li {
   display: block;
 }
-
+*/
 /*stylng for tab content end here*/
 /*=================================
   main styling ends here
