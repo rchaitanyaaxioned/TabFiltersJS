@@ -233,7 +233,7 @@ h1::first-letter {
   height: 3px;
   display: block;
   position: absolute;
-  top: 68%;
+  top: 26.4%;
   left: 7%;
   background: #AFBBC9;
   content: "";
@@ -244,7 +244,7 @@ h1::first-letter {
   height: 3px;
   display: block;
   position: absolute;
-  top: 68%;
+  top: 26.4%;
   right: 7%;
   background: #AFBBC9;
   content: "";
