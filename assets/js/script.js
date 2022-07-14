@@ -5,6 +5,7 @@ const btn = document.querySelectorAll(".btn");
 const imgs = document.querySelectorAll(".all-img");
 const lightBox = document.querySelector(".lb-img-list");
 const lbImgs = document.querySelectorAll(".lb-img");
+var closeBtn = document.querySelector(".close");
 
 //for activating tab
 tabs.forEach(selectTab);
@@ -51,14 +52,32 @@ function selectBtn(item, index) {
     for (let i = 0; i <= imgs.length; i++) {
       // console.log(imgs[i]);
       let imgValue = imgs[i].getAttribute("data-value-img");
+      console.log("imgValue : " + imgValue);
+      let lbImgValue = lbImgs[i].getAttribute("data-value-lb");
+      console.log("lbImgValue : " + lbImgValue);
       // console.log(imgValue);
       if (tabValue == imgValue) {
         imgs[i].classList.remove("hide");
         imgs[i].classList.add("show");
+        imgs[i].addEventListener("click", activateLB);
+        function activateLB() {
+          if (imgValue == lbImgValue) {
+            lightBox.classList.add("show");
+            lbImgs[i].classList.add("show");
+          }
+          else {
+            lbImgs[i].classList.remove("show");
+          }
+        }
       } else {
         imgs[i].classList.remove("show");
         imgs[i].classList.add("hide");
       }
     }
   }
+}
+
+closeBtn.addEventListener("click", closeLB);
+function closeLB() {
+  lightBox.classList.remove("show");
 }
