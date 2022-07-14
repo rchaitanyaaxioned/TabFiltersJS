@@ -3,6 +3,8 @@ const aTab = document.querySelectorAll(".tab-a");
 const tabContent = document.querySelectorAll(".tab-content");
 const btn = document.querySelectorAll(".btn");
 const imgs = document.querySelectorAll(".all-img");
+const lightBox = document.querySelector(".lb-img-list");
+const lbImgs = document.querySelectorAll(".lb-img");
 
 //for activating tab
 tabs.forEach(selectTab);
@@ -47,7 +49,9 @@ function selectBtn(item, index) {
     item.classList.add("active-btn");
     let tabValue = item.getAttribute("data-value-tab");
     for (let i = 0; i <= imgs.length; i++) {
+      // console.log(imgs[i]);
       let imgValue = imgs[i].getAttribute("data-value-img");
+      // console.log(imgValue);
       if (tabValue == imgValue) {
         imgs[i].classList.remove("hide");
         imgs[i].classList.add("show");
@@ -55,7 +59,6 @@ function selectBtn(item, index) {
         imgs[i].classList.remove("show");
         imgs[i].classList.add("hide");
       }
-      console.log(imgValue);
     }
   }
 }

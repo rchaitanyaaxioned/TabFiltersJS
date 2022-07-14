@@ -254,7 +254,7 @@ h1::first-letter {
   width: 100%;
   text-align: center;
   border-bottom: 3px solid #AFBBC9;
-  transition: border 0.5s ease,border-bottom 0.5s ease,color 0.5s ease;
+  transition: border 0.5s ease, border-bottom 0.5s ease, color 0.5s ease;
 }
 
 /*for active tab*/
@@ -354,100 +354,56 @@ h1::first-letter {
   display: none;
 }
 
-/*
-.history {
-  display: flex;
-  flex-direction: column;
+/*styling for light box start here*/
+/* The background */
+.lb-img-list {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding: 35px 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  margin: 10px 0;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.btn-list {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+.lb-img-list li {
+  margin: 10px 1%;
 }
 
-.btn-list li {
-  flex-basis: 20%;
-  text-align: center;
-}
 
-.btn {
-  width: 80%;
-  padding: 5px 0;
-  background-color: #AFBBC9;
-  border: 1px solid #28489A;
-  border-radius: 5px;
-  color: #28489A;
-  font-size: 20px;
-  text-transform: capitalize;
-}
-
-.active-btn {
-  background-color: #28489A;
-  border: 1px solid #AFBBC9;
-  color: #AFBBC9;
-}
-
-.img-list {
-  margin: 40px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.img-list li {
-  margin: 10px 5px;
-}
-
-.img-list li img {
-  max-width: 285px;
-  max-height: 220px;
-}
-
-.li-content {
-  display: none;
-  justify-content: space-between;
-}
-
-.tab-content li {
+/*for lb imgs*/
+.lb-img {
   display: none;
 }
 
-.tab-content .active-li {
-  display: flex;
+/* The Close Button */
+.close {
+  color: #FFF;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 5%;
+  font-size: 50px;
+  font-weight: bold;
 }
 
-.tab-content figure {
-  flex-basis: 40%;
-  text-align: center;
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.leadership img,
-.sustainability img {
-  width: 80%;
-  height: 80%;
-}
+/*styling for light box end here*/
 
-.tab-content p {
-  margin: 25px 0;
-  color: #AFBBC9;
-  flex-basis: 60%;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.all-img {
-  display: block;
-}
-
-.btn-list li,
-.img-list li {
-  display: block;
-}
-*/
 /*stylng for tab content end here*/
 /*=================================
   main styling ends here
