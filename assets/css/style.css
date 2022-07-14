@@ -355,7 +355,7 @@ h1::first-letter {
   justify-content: center;
 }
 
-.img-list li {
+.all-img {
   margin: 10px 1%;
 }
 
@@ -390,7 +390,7 @@ h1::first-letter {
 /* The Close Button */
 .close {
   position: absolute;
-  top: 50px;
+  top: 0;
   right: 5%;
   color: #FFF;
   cursor: pointer;
@@ -407,6 +407,20 @@ h1::first-letter {
 
 .show {
   display: flex;
+  animation: showImg 0.5s ease-in-out forwards;
+}
+
+@keyframes showImg {
+  0% {
+    transform: scale(0.5,0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
 }
 
 .hide {
