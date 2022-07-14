@@ -9,22 +9,16 @@ var closeBtn = document.querySelector(".close");
 
 //for activating tab
 tabs.forEach(selectTab);
-
 function selectTab(item, index) {
-
   item.addEventListener("click", activateTab);
-
   function activateTab() {
-
     //for item in tab content
     tabs.forEach(removeClass);
-
     function removeClass(ritem, ridx) {
       ritem.classList.remove("active-tab");
       aTab[ridx].classList.remove("active-a");
       tabContent[ridx].classList.remove("show");
     }
-
     item.classList.add("active-tab");
     aTab[index].classList.add("active-a");
     tabContent[index].classList.add("show");
@@ -33,20 +27,14 @@ function selectTab(item, index) {
 
 //for activating btn
 btn.forEach(selectBtn);
-
 function selectBtn(item, index) {
-
   item.addEventListener("click", activateBtn);
-
   function activateBtn() {
-
     //for item in tab content
     btn.forEach(removeClass);
-
     function removeClass(ritem, ridx) {
       ritem.classList.remove("active-btn");
     }
-
     item.classList.add("active-btn");
     let tabValue = item.getAttribute("data-value-tab");
     for (let i = 0; i <= imgs.length; i++) {
@@ -61,6 +49,10 @@ function selectBtn(item, index) {
         imgs[i].classList.add("show");
         imgs[i].addEventListener("click", activateLB);
         function activateLB() {
+          // lbImgs.forEach(removeShow);
+          // function removeShow(item, idx) {
+          //   item[idx].classList.remove("show");
+          // }
           if (imgValue == lbImgValue) {
             lightBox.classList.add("show");
             lbImgs[i].classList.add("show");
@@ -81,3 +73,28 @@ closeBtn.addEventListener("click", closeLB);
 function closeLB() {
   lightBox.classList.remove("show");
 }
+
+//for lightBox
+/*
+lbImgs.forEach(selectLB);
+console.log("lbImgs :- " + lbImgs);
+
+function selectLB(item, index) {
+  console.log("lbitemOUT :- " + item + "," + "lbindexOUT :- " + index);
+  item.addEventListener("click", activateLB);
+  function activateLB() {
+    alert("Hi!");
+    console.log("lbitem :- " + item + "," + "lbindex :- " + index);
+
+
+    if (item.classList.contains("show")) {
+      lightBox.classList.remove("show");
+      lbImgs[index].classList.remove("show");
+    }
+    else {
+      lightBox.classList.add("show");
+      lbImgs[index].classList.add("show");
+    }
+  }
+}
+*/
