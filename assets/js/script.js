@@ -76,6 +76,7 @@ function removeClassActiveBtn() {
 }
 
 //for closing lightbox
-function closeLB() {
+function closeLB(e) {
+  console.log(e.target.contains("lb-img"));
   lightBox.classList.remove("show");
 }
