@@ -219,6 +219,10 @@ h1::first-letter {
 
 /*stylng for heading end here*/
 /*stylng for tab list start here*/
+.tab-list-container {
+  position: relative;
+}
+
 .tab-list {
   padding: 0 2%;
   margin: 50px 0 40px 0;
@@ -229,23 +233,23 @@ h1::first-letter {
 }
 
 .tab-list:before {
-  width: 23px;
+  width: 20px;
   height: 3px;
   display: block;
   position: absolute;
-  top: 26.4%;
-  left: 7%;
+  bottom: 0;
+  left: 0.3%;
   background: #AFBBC9;
   content: "";
 }
 
 .tab-list::after {
-  width: 23px;
+  width: 20px;
   height: 3px;
   display: block;
   position: absolute;
-  top: 26.4%;
-  right: 7%;
+  bottom: 0;
+  right: 0.3%;
   background: #AFBBC9;
   content: "";
 }
@@ -322,7 +326,7 @@ h1::first-letter {
   color: #28489A;
   font-size: 20px;
   text-transform: capitalize;
-  transition: background-color 1s ease, border 1s ease, color 1s ease, transform 1s ease, background-image 1s ease;
+  transition: background-color 1s ease, border 1s ease, transform 1s ease, background-image 1s ease;
 }
 
 .active-btn {
@@ -349,6 +353,7 @@ h1::first-letter {
 }
 
 .img-list {
+  width: 100%;
   margin: 10px 0;
   display: flex;
   align-items: center;
@@ -435,6 +440,3 @@ h1::first-letter {
 /*=================================
   main styling ends here
 =================================*/
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}
