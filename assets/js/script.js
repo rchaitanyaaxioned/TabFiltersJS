@@ -21,7 +21,7 @@ function selectTab(item, index) {
 
 //for activating btn
 btn.forEach(selectBtn);
-function selectBtn(item, index) {
+function selectBtn(item) {
   item.addEventListener("click", activateBtn);
   function activateBtn() {
     removeClassActiveBtn();
@@ -39,6 +39,7 @@ function selectBtn(item, index) {
   }
 }
 
+//for light box
 imgs.forEach(selectImg);
 function selectImg(item, idx) {
 
@@ -47,6 +48,7 @@ function selectImg(item, idx) {
     removeClassShow();
     lightBox.classList.add("show");
     lbImgs[idx].classList.add("show");
+    lightBox.addEventListener("click", closeLB);
   }
 }
 
@@ -74,8 +76,7 @@ function removeClassShow() {
   }
 }
 
-
-closeBtn.addEventListener("click", closeLB);
+//for closing lightbox
 function closeLB() {
   lightBox.classList.remove("show");
 }
