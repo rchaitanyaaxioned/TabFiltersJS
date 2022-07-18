@@ -2,9 +2,11 @@ const tabs = document.querySelectorAll(".tab");
 const aTab = document.querySelectorAll(".tab-a");
 const tabContent = document.querySelectorAll(".tab-content");
 const btn = document.querySelectorAll(".btn");
+const imgLi = document.querySelectorAll(".img-li");
 const imgs = document.querySelectorAll(".all-img");
-const lbImgs = document.querySelectorAll(".lb-img");
-var lightBox = document.querySelector(".lb-img-list");
+
+var lightBox = document.querySelector(".lightBox");
+var lbImg = document.querySelector(".lb-img");
 var closeBtn = document.querySelector(".close");
 
 //for activating tab
@@ -31,9 +33,13 @@ function selectBtn(item) {
       if (imgs[i].classList.contains(tabValue)) {
         imgs[i].classList.remove("hide");
         imgs[i].classList.add("show");
+        imgLi[i].classList.remove("hide");
+        imgLi[i].classList.add("show");
       } else {
         imgs[i].classList.remove("show");
         imgs[i].classList.add("hide");
+        imgLi[i].classList.remove("show");
+        imgLi[i].classList.add("hide");
       }
     }
   }
@@ -45,9 +51,10 @@ function selectImg(item, idx) {
 
   item.addEventListener("click", activateLB);
   function activateLB() {
-    removeClassShow();
+    let imgSrc = item.src;
     lightBox.classList.add("show");
-    lbImgs[idx].classList.add("show");
+    lbImg.src = imgSrc;
+    // console.log(imgSrc);
     lightBox.addEventListener("click", closeLB);
   }
 }
@@ -65,14 +72,6 @@ function removeClassActiveBtn() {
   btn.forEach(removeClass);
   function removeClass(ritem) {
     ritem.classList.remove("active-btn");
-  }
-}
-
-function removeClassShow() {
-  lbImgs.forEach(removeClass);
-
-  function removeClass(item) {
-    item.classList.remove("show");
   }
 }
 

@@ -357,7 +357,7 @@ h1::first-letter {
   justify-content: center;
 }
 
-.all-img {
+.img-li {
   margin: 10px 1%;
   flex-basis: 30%;
 }
@@ -374,7 +374,7 @@ h1::first-letter {
   flex-wrap: wrap;
   justify-content: center;
   top: 0;
-  left: 0;
+  /* left: 0; */
   overflow: auto;
   z-index: 1;
 }
