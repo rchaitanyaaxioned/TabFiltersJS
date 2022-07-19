@@ -4,7 +4,7 @@ const tabContent = document.querySelectorAll(".tab-content");
 const btn = document.querySelectorAll(".btn");
 const imgLi = document.querySelectorAll(".img-li");
 const imgs = document.querySelectorAll(".all-img");
-var docBody = document.body;
+var docHtml = document.querySelector("html");
 var lightBox = document.querySelector(".lightBox");
 var lbImg = document.querySelector(".lb-img");
 var closeBtn = document.querySelector(".close");
@@ -56,7 +56,7 @@ function selectImg(item, idx) {
     lbImg.src = imgSrc;
     lightBox.addEventListener("click", closeLB);
     closeBtn.addEventListener("click", closeLB);
-    docBody.classList.add("stopScroll");
+    docHtml.classList.add("stopScroll");
   }
 }
 
@@ -81,6 +81,6 @@ function closeLB(e) {
   //comparing for on click of img do nothing
   if (e.target == e.currentTarget) {
     lightBox.classList.remove("show");
-    docBody.classList.remove("stopScroll");
+    docHtml.classList.remove("stopScroll");
   }
 }
