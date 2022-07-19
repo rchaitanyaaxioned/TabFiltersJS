@@ -54,10 +54,8 @@ function selectImg(item, idx) {
     let imgSrc = item.src;
     lightBox.classList.add("show");
     lbImg.src = imgSrc;
-    // console.log(imgSrc);
     lightBox.addEventListener("click", closeLB);
     closeBtn.addEventListener("click", closeLB);
-    document.scroll(0, 0);
   }
 }
 
