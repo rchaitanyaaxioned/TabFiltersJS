@@ -345,7 +345,6 @@ h1::first-letter {
   100% {
     transform: scale(1, 1);
   }
-
 }
 
 .img-list {
@@ -374,7 +373,6 @@ h1::first-letter {
   flex-wrap: wrap;
   justify-content: center;
   top: 0;
-  /* left: 0; */
   overflow: auto;
   z-index: 1;
 }
@@ -432,12 +430,10 @@ h1::first-letter {
 }
 
 .stopScroll {
-  position: fixed;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 /*styling for light box end here*/
-
 /*stylng for tab content end here*/
 /*=================================
   main styling ends here
