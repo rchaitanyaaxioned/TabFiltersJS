@@ -213,9 +213,7 @@ h1 {
   font-size: 30px;
 }
 
-h1::first-letter {
-  text-transform: capitalize;
-}
+h1::first-letter {text-transform: capitalize;}
 
 /*stylng for heading end here*/
 /*stylng for tab list start here*/
@@ -269,9 +267,7 @@ h1::first-letter {
   text-transform: capitalize;
 }
 
-.active-a {
-  color: #28489A;
-}
+.active-a {color: #28489A;}
 
 /*stylng for tab list end here*/
 /*stylng for tab content start here*/
@@ -334,18 +330,11 @@ h1::first-letter {
 }
 
 @keyframes btnActive {
-  0% {
-    transform: scale(1, 1);
-  }
+  0% {transform: scale(1, 1);}
 
-  50% {
-    transform: scale(1.2, 1.2);
-  }
+  50% {transform: scale(1.2, 1.2);}
 
-  100% {
-    transform: scale(1, 1);
-  }
-
+  100% {transform: scale(1, 1);}
 }
 
 .img-list {
@@ -374,7 +363,6 @@ h1::first-letter {
   flex-wrap: wrap;
   justify-content: center;
   top: 0;
-  /* left: 0; */
   overflow: auto;
   z-index: 1;
 }
@@ -427,17 +415,11 @@ h1::first-letter {
 
 }
 
-.hide {
-  display: none;
-}
+.hide {display: none;}
 
-.stopScroll {
-  position: fixed;
-  overflow: hidden;
-}
+.stopScroll {overflow-y: hidden;}
 
 /*styling for light box end here*/
-
 /*stylng for tab content end here*/
 /*=================================
   main styling ends here
