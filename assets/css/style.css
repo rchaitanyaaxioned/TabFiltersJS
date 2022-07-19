@@ -332,9 +332,13 @@ h1::first-letter {text-transform: capitalize;}
 @keyframes btnActive {
   0% {transform: scale(1, 1);}
 
-  50% {transform: scale(1.2, 1.2);}
+  50% {
+    transform: scale(1.2, 1.2);
+  }
 
-  100% {transform: scale(1, 1);}
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .img-list {
@@ -417,7 +421,9 @@ h1::first-letter {text-transform: capitalize;}
 
 .hide {display: none;}
 
-.stopScroll {overflow-y: hidden;}
+.stopScroll {
+  overflow-y: hidden;
+}
 
 /*styling for light box end here*/
 /*stylng for tab content end here*/
