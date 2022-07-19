@@ -56,6 +56,8 @@ function selectImg(item, idx) {
     lbImg.src = imgSrc;
     // console.log(imgSrc);
     lightBox.addEventListener("click", closeLB);
+    closeBtn.addEventListener("click", closeLB);
+    document.scroll(0, 0);
   }
 }
 
@@ -77,6 +79,8 @@ function removeClassActiveBtn() {
 
 //for closing lightbox
 function closeLB(e) {
-  console.log(e.target.contains("lb-img"));
-  lightBox.classList.remove("show");
+  //comparing for on click of img do nothing
+  if (e.target == e.currentTarget) {
+    lightBox.classList.remove("show");
+  }
 }
