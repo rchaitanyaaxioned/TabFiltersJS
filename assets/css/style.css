@@ -431,6 +431,11 @@ h1::first-letter {
   display: none;
 }
 
+.stopScroll {
+  position: fixed;
+  overflow: hidden;
+}
+
 /*styling for light box end here*/
 
 /*stylng for tab content end here*/
