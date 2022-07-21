@@ -12,6 +12,7 @@ var closeBtn = document.querySelector(".close");
 //for activating tab
 tabs.forEach(selectTab);
 function selectTab(item, index) {
+
   item.addEventListener("click", activateTab);
   function activateTab() {
     removeClassActiveTab();
@@ -50,15 +51,20 @@ imgs.forEach(selectImg);
 function selectImg(item, idx) {
 
   item.addEventListener("click", activateLB);
+
   function activateLB() {
-    let imgSrc = item.src;
+    let imgSrc = this.src;
+    console.log("imgSrc :" + imgSrc);
     lightBox.classList.add("show");
     lbImg.src = imgSrc;
-    lightBox.addEventListener("click", closeLB);
-    closeBtn.addEventListener("click", closeLB);
+    // lightBox.addEventListener("click", closeLB);
+    // closeBtn.addEventListener("click", closeLB);
     docHtml.classList.add("stopScroll");
   }
 }
+
+lightBox.addEventListener("click", closeLB);
+closeBtn.addEventListener("click", closeLB);
 
 function removeClassActiveTab() {
   tabs.forEach(removeClass);
