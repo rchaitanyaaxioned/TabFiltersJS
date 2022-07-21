@@ -1,12 +1,11 @@
-const tabs = document.querySelectorAll(".tab");
-const aTab = document.querySelectorAll(".tab-a");
-const tabContent = document.querySelectorAll(".tab-content");
-const btn = document.querySelectorAll(".btn");
-const imgLi = document.querySelectorAll(".img-li");
-const imgs = document.querySelectorAll(".all-img");
+var tabs = document.querySelectorAll(".tab-list li");
+var tabContent = document.querySelectorAll(".tab-content");
+var btns = document.querySelectorAll(".btn-list a");
+var imgLi = document.querySelectorAll(".img-list li");
+var imgs = document.querySelectorAll(".all-img");
 var docHtml = document.querySelector("html");
 var lightBox = document.querySelector(".lightBox");
-var lbImg = document.querySelector(".lb-img");
+var lbImg = document.querySelector(".lightBox img");
 var closeBtn = document.querySelector(".close");
 
 //for activating tab
@@ -16,20 +15,19 @@ function selectTab(item, index) {
   item.addEventListener("click", activateTab);
   function activateTab() {
     removeClassActiveTab();
-    item.classList.add("active-tab");
-    aTab[index].classList.add("active-a");
+    this.classList.add("active-tab");
     tabContent[index].classList.add("show");
   }
 }
 
 //for activating btn
-btn.forEach(selectBtn);
+btns.forEach(selectBtn);
 function selectBtn(item) {
   item.addEventListener("click", activateBtn);
   function activateBtn() {
     removeClassActiveBtn();
-    item.classList.add("active-btn");
-    let tabValue = item.getAttribute("data-value-tab");
+    this.classList.add("active-btn");
+    let tabValue = this.getAttribute("data-value-tab");
     for (let i = 0; i <= imgs.length; i++) {
       if (imgs[i].classList.contains(tabValue)) {
         imgs[i].classList.remove("hide");
@@ -48,7 +46,7 @@ function selectBtn(item) {
 
 //for light box
 imgs.forEach(selectImg);
-function selectImg(item, idx) {
+function selectImg(item) {
 
   item.addEventListener("click", activateLB);
 
@@ -68,17 +66,16 @@ closeBtn.addEventListener("click", closeLB);
 
 function removeClassActiveTab() {
   tabs.forEach(removeClass);
-  function removeClass(ritem, ridx) {
-    ritem.classList.remove("active-tab");
-    aTab[ridx].classList.remove("active-a");
-    tabContent[ridx].classList.remove("show");
+  function removeClass(item, idx) {
+    item.classList.remove("active-tab");
+    tabContent[idx].classList.remove("show");
   }
 }
 
 function removeClassActiveBtn() {
-  btn.forEach(removeClass);
-  function removeClass(ritem) {
-    ritem.classList.remove("active-btn");
+  btns.forEach(removeClass);
+  function removeClass(item) {
+    item.classList.remove("active-btn");
   }
 }
 
