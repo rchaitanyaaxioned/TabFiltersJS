@@ -213,7 +213,9 @@ h1 {
   font-size: 30px;
 }
 
-h1::first-letter {text-transform: capitalize;}
+h1::first-letter {
+  text-transform: capitalize;
+}
 
 /*stylng for heading end here*/
 /*stylng for tab list start here*/
@@ -248,7 +250,7 @@ h1::first-letter {text-transform: capitalize;}
   content: "";
 }
 
-.tab {
+.tab-list li {
   width: 100%;
   text-align: center;
   border-bottom: 3px solid #AFBBC9;
@@ -260,14 +262,16 @@ h1::first-letter {text-transform: capitalize;}
   border-bottom: none;
 }
 
-.tab-a {
+.tab-list a {
   padding: 15px 0;
   color: #AFBBC9;
   font-size: 20px;
   text-transform: capitalize;
 }
 
-.active-a {color: #28489A;}
+.active-tab a {
+  color: #28489A;
+}
 
 /*stylng for tab list end here*/
 /*stylng for tab content start here*/
@@ -309,7 +313,7 @@ h1::first-letter {text-transform: capitalize;}
   text-align: center;
 }
 
-.btn {
+.btn-list a {
   width: 80%;
   padding: 5px 0;
   background-color: #AFBBC9;
@@ -330,7 +334,9 @@ h1::first-letter {text-transform: capitalize;}
 }
 
 @keyframes btnActive {
-  0% {transform: scale(1, 1);}
+  0% {
+    transform: scale(1, 1);
+  }
 
   50% {
     transform: scale(1.2, 1.2);
@@ -350,7 +356,7 @@ h1::first-letter {text-transform: capitalize;}
   justify-content: center;
 }
 
-.img-li {
+.img-list li {
   margin: 10px 1%;
   flex-basis: 30%;
 }
@@ -377,7 +383,7 @@ h1::first-letter {text-transform: capitalize;}
 }
 
 /*for lb imgs*/
-.lb-img {
+.lightBox img {
   max-width: 355px;
   max-height: 275px;
   display: block;
@@ -419,7 +425,9 @@ h1::first-letter {text-transform: capitalize;}
 
 }
 
-.hide {display: none;}
+.hide {
+  display: none;
+}
 
 .stopScroll {
   overflow-y: hidden;
